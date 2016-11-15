@@ -21,24 +21,18 @@ script will automatically compress it into something it will understand.
 
 ... $ ./timestamp.py
 
-Gimme a timestamp: e0 07 0a 00 06 00 0f 00  11 00 2c 00 31 00 7f 00
-
-Registry timestamp: 2016-06-15 17:44:49.127
-
-... $
+Gimme a timestamp: e0 07 0a 00 06 00 0f 00  11 00 2c 00 31 00 7f 00  
+Registry timestamp: 2016-06-15 17:44:49.127  
+... $  
 
 # Command-line mode
 
-... $ ./timestamp.py 919e6539
-
-FAT timestamp: 2008-11-05 19:52:34
-
+... $ ./timestamp.py 919e6539  
+FAT timestamp: 2008-11-05 19:52:34  
 ... $
 
 # Pipe/redirect mode
 
-... $ echo "01cb17701e9c885a" | ./timestamp.py
-
-NTFS timestamp: 2010-06-29 09:47:42.754212
-
-... $
+... $ echo "01cb17701e9c885a" | ./timestamp.py  
+NTFS timestamp: 2010-06-29 09:47:42.754212  
+... $  
