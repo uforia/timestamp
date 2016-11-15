@@ -19,8 +19,7 @@ script will automatically compress it into something it will understand.
 
 # Interactive mode
 
-... $ ./timestamp.py
-
+... $ ./timestamp.py  
 Gimme a timestamp: e0 07 0a 00 06 00 0f 00  11 00 2c 00 31 00 7f 00  
 Registry timestamp: 2016-06-15 17:44:49.127  
 ... $  
