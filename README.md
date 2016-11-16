@@ -1,7 +1,5 @@
 # Generic Timestamp Converter for Windows
 
-Version 0.7 (c) Arnim Eijkhoudt, KPN-CERT, arnime < at > kpn-cert.nl
-
 Windows is a mess of timestamp conventions, and we were getting pretty annoyed with having to
 mess around with a plethora of tooling to convert them into something resembling a human-
 readable format. Hence, this poorly cobbled-together script was born. It should work fine under
