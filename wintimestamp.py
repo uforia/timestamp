@@ -3,7 +3,7 @@
 # Generic Timestamp Converter for Windows
 # ---------------------------------------
 #
-# Version 0.7 (c) Arnim Eijkhoudt, KPN-CERT
+# Version 0.8 (c) Arnim Eijkhoudt, KPN-CERT
 #
 # Windows is a mess of timestamp conventions, and we were getting pretty annoyed with having to
 # mess around with a plethora of tooling to convert them into something resembling a human-
@@ -52,13 +52,13 @@ else:
 	dt=''.join(sys.argv[1:]).replace(' ','')
 if len(dt)==16:
 	# ZOMG it's NTFS!
-	us=int(dt,16)/10.
+	us=int("".join(reversed([dt[i:i+2] for i in range(0, len(dt), 2)])),16)/10.
 	print("NTFS timestamp: "+str(datetime.datetime(1601,1,1)+datetime.timedelta(microseconds=us)))
 if len(dt)==32:
 	# Crikey, a registry timestamp
 	year=dt[2:4]+dt[0:2]
-	weekday=dt[6:8]+dt[4:6]
-	month=dt[10:12]+dt[8:10]
+	month=dt[6:8]+dt[4:6]
+	weekday=dt[10:12]+dt[8:10]
 	day=dt[14:16]+dt[12:14]
 	hour=dt[18:20]+dt[16:18]
 	min=dt[22:24]+dt[20:22]
@@ -67,7 +67,8 @@ if len(dt)==32:
 	print("Registry timestamp: "+str(int(year,16))+'-'+str(int(month,16)).zfill(2)+'-'+str(int(day,16)).zfill(2)+' '+str(int(hour,16)).zfill(2)+':'+str(int(min,16)).zfill(2)+':'+str(int(sec,16)).zfill(2)+'.'+str(int(ms,16)))
 if len(dt)==8:
 	# LOL u r so FAT!
-	dt=int(dt[2:4]+dt[0:2]+dt[6:8]+dt[4:6],16)
+	dt="".join(reversed([dt[i:i+2] for i in range(0, len(dt), 2)]))
+	dt=int((dt[4:8]+dt[0:4]),16)
 	day=dt&0x1f
 	month=(dt>>5)&0x0f
 	year=(dt>>9)&0x7f
@@ -77,4 +78,7 @@ if len(dt)==8:
 	hour=(dt>>11)&0x1f
 	if sec>59:
 		sec=0
-	print("FAT timestamp: "+str(datetime.datetime(1980+year,month,day,hour,min,sec)))
+	try:
+		print("FAT timestamp: "+str(datetime.datetime(1980+year,month,day,hour,min,sec)))
+	except ValueError:
+		print("Error in FAT timestamp!")
