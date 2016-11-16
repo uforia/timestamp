@@ -10,7 +10,7 @@ If you don't like this, I don't wanna hear about it!
 
 ## What it does
 
-This script is capable of detecting and converting Windows' Registry-, NTFS- and FAT-timestamps
+This script is capable of detecting and converting various forms of hexadecimal timestamps
 into something human readable. You can run it interactively, directly from the command-line or
 you can pipe / redirect a hex string directly to it. Inter-byte spacing is not important, the
 script will automatically compress it into something it will understand.
