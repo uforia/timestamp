@@ -19,17 +19,17 @@ script will automatically compress it into something it will understand.
 
 ... $ ./wintimestamp.py  
 Gimme a timestamp: e0 07 0a 00 06 00 0f 00  11 00 2c 00 31 00 7f 00  
-Registry timestamp: 2016-10-15 17:44:49.127
+Registry timestamp: 2016-10-15 17:44:49.127  
 ... $  
 
 # Command-line mode
 
 ... $ ./wintimestamp.py 919e6539  
-FAT timestamp: 2008-11-05 19:52:34
+FAT timestamp: 2008-11-05 19:52:34  
 ... $
 
 # Pipe/redirect mode
 
-... $ echo "C2 3F 17 B7 2E C9 C7 01" | ./wintimestamp.py                
-NTFS timestamp: 2007-07-18 11:28:08.078124
+... $ echo "C2 3F 17 B7 2E C9 C7 01" | ./wintimestamp.py  
+NTFS timestamp: 2007-07-18 11:28:08.078124  
 ... $  
