@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Version 1.0 (c) Arnim Eijkhoudt, KPN-CERT
+# Version 1.0 (c) Arnim Eijkhoudt, KPN-CERT, arnime < at > kpn-cert.nl
 
 import sys,datetime
 
@@ -50,6 +50,7 @@ if len(dt)==8:
 	min=(dt>>5)&0x3f
 	hour=(dt>>11)&0x1f
 	if sec>59:
+		# Seriously, who thought 2-second precision was a good idea?
 		sec=0
 	try:
 		print("FAT timestamp: "+str(datetime.datetime(1980+year,month,day,hour,min,sec)))
