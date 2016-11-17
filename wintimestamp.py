@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Version 0.9 (c) Arnim Eijkhoudt, KPN-CERT
+# Version 1.0 (c) Arnim Eijkhoudt, KPN-CERT
 
 import sys,datetime
 
@@ -22,10 +22,11 @@ if len(dt)==16:
 	except OverflowError:
 		print("Timestamp is out of range!")
 	else:
-		if int(str(ntfs)[0:4])>2006:
-			# Yeah this is probably NTFS, since Windows Vista wasn't born before 2006
-			print("NTFS timestamp: "+str(ntfs))
-		print("VAX/VMS timestamp: "+str(vax))
+		# It's probably NTFS, since VAX wasn't born before 1858...
+		print("NTFS timestamp: "+str(ntfs))
+		# ...but on the off-chance...
+		if int(str(ntfs)[0:4])>1858:
+			print("VAX/VMS timestamp: "+str(vax))
 if len(dt)==32:
 	# Crikey, a registry timestamp
 	year=dt[2:4]+dt[0:2]
