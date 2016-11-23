@@ -38,6 +38,17 @@ if len(dt)==32:
 	sec=dt[26:28]+dt[24:26]
 	ms=dt[30:32]+dt[28:30]
 	print("Registry timestamp: "+str(int(year,16))+'-'+str(int(month,16)).zfill(2)+'-'+str(int(day,16)).zfill(2)+' '+str(int(hour,16)).zfill(2)+':'+str(int(min,16)).zfill(2)+':'+str(int(sec,16)).zfill(2)+'.'+str(int(ms,16)))
+if len(dt)>=10 and len(dt)<=14:
+	# Perhaps an integer timestamp, ##########(.###) ?
+	if '.' in dt:
+		sec=int(dt.split('.')[0])
+		ms=dt.split('.')[1]
+		if len(ms)>1:
+			ms="."+ms
+	else:
+		sec=int(dt)
+		ms=""
+	print("Integer timestamp: "+str(datetime.datetime(1970,1,1)+datetime.timedelta(seconds=sec))+ms)
 if len(dt)==8:
 	# LOL u r so FAT!
 	dt="".join(reversed([dt[i:i+2] for i in range(0, len(dt), 2)]))
