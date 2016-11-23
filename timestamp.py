@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Version 1.0 (c) Arnim Eijkhoudt, KPN-CERT, arnime < at > kpn-cert.nl
+# Version 1.1 (c) Arnim Eijkhoudt, KPN-CERT, arnime < at > kpn-cert.nl
 
 import sys,datetime
 
