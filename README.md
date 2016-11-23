@@ -1,6 +1,6 @@
 # Generic Timestamp Converter
 
-Windows is a mess of timestamp conventions, and it can be pretty annoying having to deal with
+Systems tend to use a mess of timestamp formats, and it can be pretty annoying having to deal with
 a plethora of smaller tooling to convert them into something resembling a human-readable format.
 Hence, this poorly cobbled-together script was born. It should work fine under most versions of
 Python (tested with 2.7/3.x).
