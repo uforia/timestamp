@@ -14,6 +14,8 @@ into something human readable. You can run it interactively, directly from the c
 you can pipe / redirect a hex string directly to it. Inter-byte spacing is not important, the
 script will automatically compress it into something it will understand.
 
+NOTE: for multiline/-item parsing, use the piping/redirect method.
+
 ## Current version's comments and considerations
 
 There is only very basic checking done to see if the timestamp appears to be correct.
@@ -23,20 +25,25 @@ VAX/VMS timestamps might be working, but there's no way to really check. Feedbac
 
 ## Interactive mode
 
-... $ ./timestamp.py  
-Gimme a timestamp: e0 07 0a 00 06 00 0f 00  11 00 2c 00 31 00 7f 00  
-Registry timestamp: 2016-10-15 17:44:49.127  
+... $ ./timestamp.py
+Gimme a timestamp: e0070a0006000f0011002c0031007f00
+"Registry","2016-10-15 17:44:49.127"
 ... $
 
 ## Command-line mode
 
-... $ ./timestamp.py 919e6539  
-FAT timestamp: 2008-11-05 19:52:34  
+... $ ./timestamp.py 919e6539
+"FAT","2008-11-05 19:52:34"
 ... $
 
 ## Pipe/redirect mode
 
-... $ echo "C2 3F 17 B7 2E C9 C7 01" | ./timestamp.py  
-NTFS timestamp: 2007-07-18 11:28:08.078124  
-VAX/VMS timestamp: 2265-06-02 11:28:08.078124  
+... $ echo 1346693048 C23F17B72EC9CB01 5FBF60C54F2CCF01 1346663048.283 1cf23440c2aac701 f975722c abcd|./timestamp.py
+"Integer","2012-09-03 17:24:08"
+"NTFS","2011-02-10 14:27:58.762388"
+"NTFS","2014-02-18 02:18:54.252426"
+"Integer","2012-09-03 09:04:08.283"
+"NTFS","2007-06-09 18:16:08.093750"
+"FAT","2002-03-18 14:47:50"
+"Error","abcd"
 ... $
