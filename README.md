@@ -25,25 +25,25 @@ VAX/VMS timestamps might be working, but there's no way to really check. Feedbac
 
 ## Interactive mode
 
-... $ ./timestamp.py
-Gimme a timestamp: e0070a0006000f0011002c0031007f00
-"Registry","2016-10-15 17:44:49.127"
+... $ ./timestamp.py  
+Gimme a timestamp: e0070a0006000f0011002c0031007f00  
+"Registry","2016-10-15 17:44:49.127"  
 ... $
 
 ## Command-line mode
 
-... $ ./timestamp.py 919e6539
-"FAT","2008-11-05 19:52:34"
+... $ ./timestamp.py 919e6539  
+"FAT","2008-11-05 19:52:34"  
 ... $
 
 ## Pipe/redirect mode
 
-... $ echo 1346693048 C23F17B72EC9CB01 5FBF60C54F2CCF01 1346663048.283 1cf23440c2aac701 f975722c abcd|./timestamp.py
-"Integer","2012-09-03 17:24:08"
-"NTFS","2011-02-10 14:27:58.762388"
-"NTFS","2014-02-18 02:18:54.252426"
-"Integer","2012-09-03 09:04:08.283"
-"NTFS","2007-06-09 18:16:08.093750"
-"FAT","2002-03-18 14:47:50"
-"Error","abcd"
+... $ echo 1346693048 C23F17B72EC9CB01 5FBF60C54F2CCF01 1346663048.283 1cf23440c2aac701 f975722c abcd|./timestamp.py  
+"Integer","2012-09-03 17:24:08"  
+"NTFS","2011-02-10 14:27:58.762388"  
+"NTFS","2014-02-18 02:18:54.252426"  
+"Integer","2012-09-03 09:04:08.283"  
+"NTFS","2007-06-09 18:16:08.093750"  
+"FAT","2002-03-18 14:47:50"  
+"Error","abcd"  
 ... $
