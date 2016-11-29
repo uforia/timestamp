@@ -9,12 +9,12 @@ Comments, suggestions: arnime < squiggly thing > kpn-cert.nl
 
 ## What it does
 
-This script is capable of detecting and converting various forms of hexadecimal timestamps
-into something human readable. You can run it interactively, directly from the command-line or
-you can pipe / redirect a hex string directly to it. Inter-byte spacing is not important, the
-script will automatically compress it into something it will understand.
+This script is capable of detecting and converting various forms of hexadecimal and integer
+timestamps into something human readable (ISO 8601 format) and reusable (CSV format). You can run
+it interactively, directly from the command-line or you can pipe / redirect a series of strings
+directly to it.
 
-NOTE: for multiline/-item parsing, use the piping/redirect method.
+For multiline/-item parsing, use the piping/redirect method (see example below).
 
 ## Current version's comments and considerations
 
