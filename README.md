@@ -14,12 +14,10 @@ timestamps into something human readable (ISO 8601 format) and reusable (CSV for
 it interactively, directly from the command-line or you can pipe / redirect a series of strings
 directly to it.
 
-For multiline/-item parsing, use the piping/redirect method (see example below).
-
 ## Current version's comments and considerations
 
-There is only very basic checking done to see if the timestamp appears to be correct.
-VAX/VMS timestamps might be working, but there's no way to really check. Feedback welcome!
+Currently, only very basic checking is done to see if the timestamp appears to be correct.
+For multiline/-item parsing, use the piping/redirect method (see example below).
 
 # Usage
 

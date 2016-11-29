@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
-# Version 1.2 (c) Arnim Eijkhoudt, KPN-CERT, arnime < at > kpn-cert.nl
+# Version 1.3 (c) Arnim Eijkhoudt, KPN-CERT, arnime < at > kpn-cert.nl
+# No license, do whatever you want with this. If you like it, I'd appreciate
+# a shoutout though! :-)
 
 import sys,datetime
 
