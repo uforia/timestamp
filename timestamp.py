@@ -64,7 +64,7 @@ def parseFAT(timestamp):
 		hour=(timestamp>>11)&0x1f
 		if sec>59:
 			# Seriously, who thought 2-second precision was a good idea?
-			sec=0
+			sec=59
 		result="\"FAT\",\""+str(datetime.datetime(1980+year,month,day,hour,min,sec))+"\""
 	except:
 		result="\"Error\",\""+str(timestamp)+"\""
